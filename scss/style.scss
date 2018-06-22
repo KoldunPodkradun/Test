@@ -1,4 +1,5 @@
-* {
+*,
+ul {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
@@ -21,7 +22,9 @@ a {
     transition-duration: .5s;
 }
 
-a:hover {
+a:hover,
+a:focus {
+    text-decoration: none;
     transition-duration: .5s;
 }
 
@@ -47,6 +50,14 @@ select {
     appearance: none;
 }
 
+.row div[class^="col-"]:first-child {
+    padding-left: 0;
+}
+
+.row div[class^="col-"]:last-child {
+    padding-right: 0;
+}
+
 header {
     width: 100%;
     position: fixed;
@@ -65,25 +76,25 @@ header {
 .top-line-items {
     li {
         span {
-            line-height: 18px;
             font-size: 14px;
             font-weight: normal;
-            line-height: 1.43;
             letter-spacing: 0.4px;
             color: #dddddd;
         }
 
         img {
-            margin-right: 14px;
+            position: relative;
+            bottom: 1px;
+            margin-right: 10px;
         }
     }
 
     li:nth-child(1) {
-        margin-right: 34px;
+        margin-right: 29px;
     }
 
     li:nth-child(2) {
-        margin-right: 39px;
+        margin-right: 29px;
     }
 }
 
@@ -91,25 +102,34 @@ header {
     display: block;
     font-size: 14px;
     font-weight: bold;
-    line-height: 1.43;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.7px;
     color: #bfc2c5;
     padding-top: 3px;
 }
 
+.top-line-nav-wrapp {
+    text-align: right;
+}
+
 .top-line-search {
-    display: block;
+    display: inline-block;
     font-size: 14px;
     font-weight: 500;
     line-height: 0.86;
     letter-spacing: 0.4px;
     color: #ffffff;
-    padding-top: 5px;
-    margin-right: 14px;
+    padding-top: 6px;
+    margin-right: 10px;
     cursor: pointer;
     img {
-        margin-left: 12px;
+        margin-left: 8px;
     }
+}
+
+.top-line-account {
+    display: inline-block;
+    padding-left: 20px;
+    border-left: 1px solid rgba(238, 238, 238, .15);
 }
 
 .middle-line {
@@ -120,15 +140,14 @@ header {
 
 .logo {
     display: block;
-    padding-top: 5px;
+    padding-top: 4px;
 }
 
 .middle-line-phone {
     display: block;
     padding-top: 5px;
     li {
-        margin-right: 5px;
-
+        margin-right: 13px;
         img {
             width: 25px;
             height: 25px;
@@ -150,7 +169,13 @@ header {
     }
 }
 
+.middle-line-btn-wrapp {
+    text-align: right;
+}
+
 .middle-line-btn {
+    display: inline-block;
+    width: 150px;
     border-radius: 4px;
     background-color: #2980b9;
     box-shadow: inset 0px 3px 7px 0 rgba(0, 0, 1, 0.2);
@@ -160,8 +185,16 @@ header {
     letter-spacing: 0.4px;
     text-align: center;
     color: #ffffff;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+
+.middle-line-btn:hover {
+    transition-duration: .5s;
+    background-color: #53bbff;
 }
 
 .bottom-line {
@@ -171,14 +204,15 @@ header {
 
 .bottom-line-menu {
     li {
-        padding: 12px 15px;
-        border-right: 1px solid rgba(238, 238, 238, .15);
+        padding: 12px 13px;
+        border-right: 1px solid rgba(238, 238, 238, 0.15);
         a {
             font-size: 14px;
             font-weight: bold;
             line-height: 0.86;
             letter-spacing: 0.7px;
             color: #f9f9f9;
+            text-transform: uppercase;
         }
     }
 
@@ -190,6 +224,7 @@ header {
 .cart {
     display: block;
     padding-top: 14px;
+    text-align: right;
     span {
         font-size: 18px;
         font-weight: bold;
@@ -202,33 +237,37 @@ header {
 
 .cart-img-wrapp {
     position: relative;
+    bottom: 4px;
     display: inline-block;
+    width: 23px;
+    height: 23px;
     img {
-        position: absolute;
-        bottom: -4px;
+        width: inherit;
+        height: inherit;
     }
 }
 
-.cart-img-wrapp:before {
+.cart-img-label {
+    font-family: "MyriadProBold";
     position: absolute;
-    content: '';
-    bottom: 10px;
-    left: 16px;
+    top: -6px;
+    right: -9px;
     width: 16px;
     height: 16px;
-    background-image: url(../img/header/2.png);
-    -webkit-background-size: cover;
-    background-size: cover;
-    z-index: 2;
+    background-color: #d50001;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 11px;
+    color: #ffffff;
 }
 
 #home {
-    margin-top: 168px;
+    margin-top: 155px;
     background-image: url(../img/home-bg.jpg);
     -webkit-background-size: cover;
     background-size: cover;
     padding-top: 119px;
-    padding-bottom: 136px;
+    padding-bottom: 127px;
 }
 
 .home-content {
@@ -240,7 +279,7 @@ header {
         line-height: 1;
         letter-spacing: 0.9px;
         color: #ffffff;
-        margin: 0 0 28px 0;
+        margin: 0 0 21px 0;
     }
 
     p {
@@ -253,8 +292,8 @@ header {
 }
 
 #contact-top {
-    padding-top: 13px;
-    padding-bottom: 39px;
+    padding-top: 5px;
+    padding-bottom: 35px;
 }
 
 .bread-crumbs {
@@ -264,20 +303,22 @@ header {
     font-stretch: normal;
     line-height: 1.79;
     letter-spacing: 0.4px;
-    color: #6c6c6c;
-    margin-bottom: 26px;
+    margin-bottom: 14px;
 
     p {
+        display: inline-block;
         margin-bottom: 0;
+        color: #337ab0;
     }
 
     a {
-        color: #337ab0;
+        display: inline-block;
+        color: #6c6c6c;
     }
 }
 
 .contact-item {
-    margin-bottom: 56px;
+    margin-bottom: 44px;
 }
 
 .contact-item-title {
@@ -286,17 +327,17 @@ header {
     font-weight: bold;
     line-height: 1.39;
     color: #2c3e50;
-    margin: 0 0 16px 0;
+    margin: 0 0 15px 0;
 }
 
 .contact-item-info-block {
     li {
         display: block;
-        margin-bottom: 19px;
+        margin-bottom: 13px;
         font-size: 14px;
         font-weight: 500;
         line-height: 1.7;
-        letter-spacing: 0.4px;
+        letter-spacing: 0.34px;
         color: #212121;
         a,
         span {
@@ -323,12 +364,12 @@ header {
 
 .contact-form-wrapp {
     position: relative;
-    margin-top: -45px;
+    margin-top: -37px;
     width: 100%;
     border-radius: 4px;
     background-color: #2c3e50;
     box-shadow: 0px 3px 7px 0 rgba(0, 0, 0, 0.2);
-    padding: 29px 52px 31px 49px;
+    padding: 25px 52px 31px 49px;
 }
 
 .contact-form-title {
@@ -337,7 +378,7 @@ header {
     font-weight: bold;
     letter-spacing: 0.6px;
     color: #f9f9f9;
-    margin: 0 0 19px 0;
+    margin: 0 0 15px 0;
 }
 
 .contact-form-descr {
@@ -345,7 +386,7 @@ header {
     font-family: 'Roboto Slab', serif;
     font-size: 18px;
     font-weight: bold;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
     color: #f9f9f9;
     margin: 0 0 32px 0;
 }
@@ -360,7 +401,7 @@ header {
     background-color: #2c3e50;
     border: solid 1px #959595;
     margin-bottom: 15px;
-    padding: 15px 0 14px 17px;
+    padding: 6px 0 6px 13px;
     font-size: 14px;
     line-height: 1.79;
     letter-spacing: 0.4px;
@@ -384,11 +425,12 @@ header {
     box-shadow: inset 0px 3px 7px 0 rgba(0, 0, 0, 0.2);
     border: none;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 #contact-bottom {
-    padding-top: 59px;
-    padding-bottom: 148px;
+    padding-top: 50px;
+    padding-bottom: 143px;
     background-color: rgba(148, 161, 170, .2);
 }
 
@@ -432,11 +474,11 @@ header {
 }
 
 .footer-menu {
-    padding-top: 45px;
-    padding-bottom: 24px;
+    padding-top: 38px;
+    padding-bottom: 21px;
     border-top: 2px solid rgba(238, 238, 238, .15);
     border-bottom: 2px solid rgba(238, 238, 238, .15);
-    margin-bottom: 47px;
+    margin-bottom: 39px;
     li {
         a {
             font-size: 12px;
@@ -449,27 +491,31 @@ header {
     }
 
     li:nth-child(1) {
-        margin-right: 146px;
+        margin-right: 140px;
     }
     li:nth-child(2) {
-        margin-right: 161px;
+        margin-right: 159px;
     }
     li:nth-child(3) {
-        margin-right: 72px;
+        margin-right: 70px;
     }
     li:nth-child(4) {
-        margin-right: 68px;
+        margin-right: 65px;
     }
     li:nth-child(5) {
-        margin-right: 133px;
+        margin-right: 130px;
     }
     li:nth-child(6) {
         margin-right: 0;
     }
 }
 
-.footer-contacts{
-	li{
-		margin-right: 30px;
-	}
+.footer-contacts {
+    li {
+        margin-right: 28px;
+    }
+
+    li:last-child{
+        margin-right: 0;
+    }
 }
