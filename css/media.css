@@ -10,6 +10,8 @@
   .bottom-line-menu li {
     padding-left: 7px;
     padding-right: 7px; }
+  .cart span {
+    display: none; }
   #home {
     margin-top: 0; }
   #contact-bottom {
@@ -46,8 +48,6 @@
     transition-duration: .5s; }
   .middle-line-phone li a {
     font-size: 18px; }
-  .cart span {
-    display: none; }
   .bottom-line-menu li a {
     letter-spacing: normal; }
   .contact-form-wrapp {
