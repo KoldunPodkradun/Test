@@ -34,6 +34,35 @@ a:focus {
 :-ms-input-placeholder {
   color: rgba(249, 249, 249, 0.7); }
 
+input:focus::-webkit-input-placeholder {
+  color: transparent; }
+
+input:focus:-moz-placeholder {
+  color: transparent; }
+
+/* FF 4-18 */
+input:focus::-moz-placeholder {
+  color: transparent; }
+
+/* FF 19+ */
+input:focus:-ms-input-placeholder {
+  color: transparent; }
+
+/* IE 10+ */
+textarea:focus::-webkit-input-placeholder {
+  color: transparent; }
+
+textarea:focus:-moz-placeholder {
+  color: transparent; }
+
+/* FF 4-18 */
+textarea:focus::-moz-placeholder {
+  color: transparent; }
+
+/* FF 19+ */
+textarea:focus:-ms-input-placeholder {
+  color: transparent; }
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -138,17 +167,16 @@ header {
 .middle-line-btn {
   display: inline-block;
   width: 150px;
+  height: 35px;
   border-radius: 4px;
   background-color: #2980b9;
   box-shadow: inset 0px 3px 7px 0 rgba(0, 0, 1, 0.2);
   font-size: 14px;
   font-weight: bold;
-  line-height: 1;
+  line-height: 35px;
   letter-spacing: 0.4px;
   text-align: center;
   color: #ffffff;
-  padding-top: 10px;
-  padding-bottom: 10px;
   text-align: center;
   cursor: pointer;
   transition-duration: .5s; }
@@ -209,6 +237,24 @@ header {
   text-align: center;
   font-size: 11px;
   color: #ffffff; }
+
+.hamburger {
+  display: none;
+  margin-left: 25px;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/header/hamburger.svg);
+  -webkit-background-size: cover;
+  background-size: cover;
+  margin-bottom: -5px; }
+
+.hamburger.cross {
+  background-image: url(../img/header/cross.svg); }
+
+.top-line {
+  position: relative;
+  padding-bottom: 10px;
+  z-index: 4; }
 
 #home {
   margin-top: 155px;
@@ -322,15 +368,17 @@ header {
 .contact-form-tel,
 #contact-form-textarea {
   width: 100%;
+  height: 40px;
   display: block;
   border-radius: 2px;
   background-color: #2c3e50;
   border: solid 1px #959595;
   margin-bottom: 15px;
-  padding: 6px 0 6px 13px;
+  padding-left: 13px;
   font-size: 14px;
-  line-height: 1.79;
-  letter-spacing: 0.4px; }
+  line-height: 40px;
+  letter-spacing: 0.4px;
+  color: rgba(249, 249, 249, 0.7); }
 
 #contact-form-textarea {
   min-height: 150px; }
@@ -340,7 +388,7 @@ header {
   height: 34px;
   font-size: 14px;
   font-weight: bold;
-  line-height: 1.79;
+  line-height: 34px;
   letter-spacing: 0.4px;
   text-align: center;
   color: #f9f9f9;
@@ -359,7 +407,7 @@ header {
 .contact-item-info-phone-wrapp img {
   vertical-align: top; }
 
-.contact-item-info-block .contact-item-info-addres-wrapp img {
+.contact-item-info-block .contact-item-info-address-wrapp img {
   margin-right: 18px; }
 
 .contact-item-info-phone {
@@ -412,3 +460,76 @@ header {
 
 .footer-contacts li:last-child {
   margin-right: 0; }
+
+.popup {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(44, 62, 80, 0.9);
+  overflow: auto;
+  z-index: -1;
+  opacity: 0;
+  transition-duration: .5s; }
+  .popup .contact-form-wrapp {
+    position: relative;
+    max-width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.popup.popup-open {
+  z-index: 5;
+  opacity: 1;
+  transition-duration: .5s; }
+
+.contact-form-cross {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-image: url(../img/header/cross.svg);
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  cursor: pointer; }
+
+.search-wrapp {
+  position: fixed;
+  top: -15%;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 3px 0 rgba(0, 0, 1, 0.25);
+  transition-duration: .5s; }
+
+.search-open {
+  top: 0;
+  transition-duration: .5s; }
+
+.search {
+  width: inherit;
+  border: none;
+  height: 99px;
+  padding-left: 58px;
+  background-image: url(../img/search.png);
+  background-repeat: no-repeat;
+  background-position: 0 32px;
+  color: #000; }
+
+.cross-wrapp {
+  text-align: right;
+  height: 100%;
+  height: 99px; }
+
+.search-cross {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background-image: url(../img/rectangle.png);
+  -webkit-background-size: cover;
+  background-size: cover;
+  transform: translateY(38px); }

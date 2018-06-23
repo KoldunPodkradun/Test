@@ -8,6 +8,14 @@
     <title>Test</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet">
+    <!--[if lte IE 8]>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+    <![endif]-->
     <link rel="stylesheet" href="libs/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
@@ -20,7 +28,7 @@
             <div class="top-line">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-sm-12 col-md-8">
                             <ul class="top-line-items">
                                 <li>
                                     <img src="img/header/truck.png" alt="#">
@@ -36,10 +44,10 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-xs-3 col-sm-6 col-md-2">
                             <span class="top-line-schedule">Пн-Вс 9:00-18:00</span>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-xs-9 col-sm-6 col-md-2">
                             <div class="top-line-nav-wrapp">
                                 <div class="top-line-search">
                                     <span>Найти</span>
@@ -48,61 +56,64 @@
                                 <div class="top-line-account">
                                     <a href="#"><img src="img/header/user.png" alt="#"></a>
                                 </div>
+                                <div class="hamburger"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="middle-line">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <img class="logo" src="img/header/logo.png" alt="#">
-                        </div>
-                        <div class="col-md-1"></div>
-                        <div class="col-md-6">
-                            <ul class="middle-line-phone">
-                                <li>
-                                    <img src="img/header/velcom.png" alt="#"><a href="tel:+375293333333">+37529 333 33 33</a>
-                                </li>
-                                <li>
-                                    <img src="img/header/live.png" alt="#"><a href="tel:+375253333333">+37525 333 33 33</a>
-                                </li>
-                                <li>
-                                    <img src="img/header/mts.png" alt="#"><a href="tel:+37533333333">+37533 333 33 3</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="middle-line-btn-wrapp">
-                                <div class="middle-line-btn">Заказать звонок</div>
+            <div class="mob-menu">
+                <div class="middle-line">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-3">
+                                <div class="logo-wrapp">
+                                    <img class="logo" src="img/header/logo.png" alt="#">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-10 col-md-6 col-md-offset-1">
+                                <ul class="middle-line-phone">
+                                    <li>
+                                        <img src="img/header/velcom.png" alt="#"><a href="tel:+375293333333">+37529 333 33 33</a>
+                                    </li>
+                                    <li>
+                                        <img src="img/header/live.png" alt="#"><a href="tel:+375253333333">+37525 333 33 33</a>
+                                    </li>
+                                    <li>
+                                        <img src="img/header/mts.png" alt="#"><a href="tel:+37533333333">+37533 333 33 3</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-12 col-sm-2 col-md-2">
+                                <div class="middle-line-btn-wrapp">
+                                    <div class="middle-line-btn">Заказать звонок</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="bottom-line">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <ul class="bottom-line-menu">
-                                <li><a href="#">Каталог</a></li>
-                                <li><a href="#">О нас</a></li>
-                                <li><a href="#">Доставка и оплата</a></li>
-                                <li><a href="#">Гарантия и возврат</a></li>
-                                <li><a href="#">Вакансии</a></li>
-                                <li><a href="#">Контакты</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-1"></div>
-                        <div class="col-md-2">
-                            <a href="#" class="cart">
+                <div class="bottom-line">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-11 col-md-9">
+                                <ul class="bottom-line-menu">
+                                    <li><a href="#">Каталог</a></li>
+                                    <li><a href="#">О нас</a></li>
+                                    <li><a href="#">Доставка и оплата</a></li>
+                                    <li><a href="#">Гарантия и возврат</a></li>
+                                    <li><a href="#">Вакансии</a></li>
+                                    <li><a href="#">Контакты</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-12 col-sm-1 col-md-2 col-md-offset-1">
+                                <a href="#" class="cart">
                                 <span>48,25 BYN</span>
                                 <div class="cart-img-wrapp">
                                     <img src="img/header/cart.png" alt="#">
                                     <div class="cart-img-label">2</div>
                                 </div>
                             </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -168,11 +179,11 @@
                             <h3 class="contact-form-title">Есть вопросы или предложения?</h3>
                             <span class="contact-form-descr">Пишите нам в любое время!</span>
                             <form class="contact-form">
-                                <input class="contact-form-name" type="text" placeholder="Ваше имя">
-                                <input class="contact-form-email" type="text" placeholder="Ваш email*" require>
-                                <input class="contact-form-tel" type="text" placeholder="Ваш номер телефона*" require>
-                                <textarea id="contact-form-textarea" placeholder="Ваше сообщение"></textarea>
-                                <input class="contact-form-submit" type="text" value="Отправить">
+                                <input class="contact-form-name" type="text" name="name" placeholder="Ваше имя">
+                                <input class="contact-form-email" type="text" name="email" placeholder="Ваш email*" required>
+                                <input class="contact-form-tel" type="text" name="phone" placeholder="Ваш номер телефона*" required>
+                                <textarea id="contact-form-textarea" ame="message" placeholder="Ваше сообщение"></textarea>
+                                <input class="contact-form-submit" type="submit" value="Отправить">
                             </form>
                         </div>
                     </div>
@@ -186,7 +197,7 @@
                         <div class="contact-item">
                             <h5 class="contact-item-title">Торговые места:</h5>
                             <ul class="contact-item-info-block">
-                                <li class="contact-item-info-addres-wrapp">
+                                <li class="contact-item-info-address-wrapp">
                                     <img src="img/contacts/pin.png" alt="#">
                                     <a href="#">№33/3</a>
                                 </li>
@@ -208,9 +219,9 @@
                         <div class="contact-item">
                             <h5 class="contact-item-title">Основной склад и магазин:</h5>
                             <ul class="contact-item-info-block">
-                                <li class="contact-item-info-addres-wrapp">
+                                <li class="contact-item-info-address-wrapp">
                                     <img src="img/contacts/pin.png" alt="#">
-                                    <a href="#">г. Минск, ул. Ивановская, 0</a>
+                                    <a class="map-address" href="#">г. Минск, ул. Ивановская, 0</a>
                                 </li>
                                 <li class="contact-item-info-phone-wrapp">
                                     <img src="img/contacts/phone.png" alt="#">
@@ -228,7 +239,7 @@
                         <div class="contact-item">
                             <h5 class="contact-item-title">Юридический адрес:</h5>
                             <ul class="contact-item-info-block">
-                                <li class="contact-item-info-addres-wrapp"><img src="img/contacts/pin.png" alt="#"><a href="#">220089 РБ г. Минск ул. Ивановская, 0</a></li>
+                                <li class="contact-item-info-address-wrapp"><img src="img/contacts/pin.png" alt="#"><a class="map-address" href="#">220089 РБ г. Минск ул. Ивановская, 0</a></li>
                             </ul>
                             <h5 class="contact-item-title contact-item-requisites">Наши реквизиты:</h5>
                         </div>
@@ -263,7 +274,41 @@
                 </div>
             </div>
         </footer>
+        <section class="search-wrapp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-10">
+                        <input class="search" type="search" name="search" placeholder="Поиск"></input>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="cross-wrapp">
+                            <div class="search-cross"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>s
+        <section class="popup popup-close">
+            <div class="popup-form">
+                <div class="contact-form-wrapp">
+                    <h3 class="contact-form-title">Есть вопросы или предложения?</h3>
+                    <span class="contact-form-descr">Пишите нам в любое время!</span>
+                    <form class="contact-form">
+                        <input class="contact-form-name" type="text" name="name" placeholder="Ваше имя">
+                        <input class="contact-form-email" type="email" name="email" placeholder="Ваш email*" required>
+                        <input class="contact-form-tel" type="tel" name="phone" placeholder="Ваш номер телефона*" required>
+                        <textarea id="contact-form-textarea" ame="message" placeholder="Ваше сообщение"></textarea>
+                        <input class="contact-form-submit" type="submit" value="Отправить">
+                    </form>
+                    <div class="contact-form-cross"></div>
+                </div>
+            </div>
     </div>
+    </section>
+    <script src="libs/jquery-1.5.1.min.js"></script>
+    <script src="js/Placeholders.js"></script>
+    <script src="js/scripts.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBB7wyzKXlxfPef5zodhUZxfyqlYRPlrbs "></script>
 </body>
 
 </html>

@@ -1,7 +1,23 @@
 @media (max-width: 1200px) {
-    .header {
-        top: -100%;
-        transition-duration: 1s;
+
+    .top-line-items li:nth-child(1) {
+        margin-right: 13px;
+    }
+
+    .top-line-items li:nth-child(2) {
+        margin-right: 15px;
+    }
+
+    .middle-line-phone li {
+        margin-right: 15px;
+        a {
+            font-size: 13px;
+        }
+    }
+
+    .bottom-line-menu li {
+        padding-left: 7px;
+        padding-right: 7px;
     }
 
     #home {
@@ -25,6 +41,10 @@
             }
         }
     }
+
+    .popup .contact-form-wrapp {
+        max-width: 65%;
+    }
 }
 
 @media (max-width: 992px) {
@@ -34,6 +54,47 @@
 
     .row div[class^="col-"]:last-child {
         padding-right: 15px;
+    }
+
+    .top-line-items {
+        display: none;
+    }
+
+    .hamburger {
+        display: inline-block;
+    }
+
+    .logo {
+        padding-top: 0;
+        padding-bottom: 20px;
+    }
+
+
+    .mob-menu {
+        position: fixed;
+        width: 100%;
+        top: -50%;
+        transition-duration: .5s;
+    }
+
+
+    .mob-menu.open-menu {
+        top: 4%;
+        transition-duration: .5s;
+    }
+
+    .middle-line-phone li a {
+        font-size: 18px;
+    }
+
+    .cart {
+        span {
+            display: none;
+        }
+    }
+
+    .bottom-line-menu li a {
+        letter-spacing: normal;
     }
 
     .contact-form-wrapp {
@@ -69,5 +130,56 @@
                 margin-bottom: 0;
             }
         }
+    }
+}
+
+@media (max-width: 767px) {
+    .bottom-line {
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    .bottom-line-menu,
+    .logo-wrapp,
+    .middle-line-phone,
+    .middle-line-btn-wrapp {
+        text-align: center;
+    }
+
+    .logo {
+        display: inline-block;
+    }
+
+    .middle-line {
+        display: none;
+    }
+
+    .bottom-line-menu li,
+    .bottom-line-menu li:first-child {
+        display: block;
+        border: none;
+    }
+
+    .cart {
+        text-align: center;
+        span {
+            display: inline-block;
+        }
+    }
+
+    .popup .contact-form-wrapp {
+        max-width: 90%;
+    }
+}
+
+
+@media (max-width: 615px) {
+    .top-line-schedule {
+        display: none;
+    }
+
+    .contact-form-wrapp{
+    	padding-left: 25px;
+    	padding-right: 25px;
     }
 }
