@@ -3,13 +3,11 @@ if (!empty($_POST)) {
 $to = trim($_POST["Test"]);
 $subject = trim($_POST["Test"]);
 
-
 // данные с мыла
 $name = trim($_POST["name"]);
 $phone = trim($_POST["phone"]);
 $email = trim($_POST["email"]);
 $text = trim($_POST["message"]);
-
 
 $start = array('utm_source', 'utm_campaign', 'utm_keyword', 'utm_geo', 'utm_matchtype', 'utm_site', 'utm_placement', 'utm_position', 'utm_ad');
 $finish = array('Source', 'ID Campaign', 'Keyword', 'GEO', 'Matchtype', 'Google', 'Placement', 'AD Position', 'ID AD');
@@ -26,14 +24,13 @@ for ($i=0;$i<count($out[0]);$i++)
 }
 
 
-
 // текст письма
 $message .= '
 <html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">  
-  <title>'.$subject.' - '.$address.'</title>
+  <title>'.$subject.'</title>
   <style>
    
     body {
